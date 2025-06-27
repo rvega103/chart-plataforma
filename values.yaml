@@ -1,0 +1,61 @@
+environment:
+  database:
+    keycloakUrl: jdbc:mysql://172.16.10.101:3306/
+    keycloakType: mysql
+    as400AuthzUrl: jdbc:as400://172.16.21.1:8471/AUTHZ
+    as400PlataformaUrl: jdbc:as400://172.16.21.1:8471/PLATAFORMA
+    as400DocumentsUrl: jdbc:as400://172.16.21.1:8471/DOCUMENTS
+    as400HermesUrl: jdbc:as400://172.16.21.1:8471/HERMES
+    keycloakUsername: a2V5Y2xvYWs=
+    keycloakPassword: a2V5Y2xvYWs=
+    as400Username: T1JJR0lOQURPUg==
+    as400Password: Qnl0ZTIwMjV4  
+  keycloak:
+    url: https://keycloakqa-core.bytesw.cloud
+    realm: plataforma
+    plataformaFrontend:
+      resource: plataforma-ui
+    plataformaBackend:
+      resource: plataforma-services
+      secret: hazge0418bylsq2KnSR2Ii2yc3pdqgT
+    adminUser: YWRtaW4=
+    adminPassword: YWRtaW4=
+  backend:
+    socketUrl: wss://websocketauth-qa.bytesw.cloud/ws/chat
+    authorizationClientUrl: http://authz-service:8080
+    notificationUrl: http://172.16.130.17:1120
+    minioS3Endpoint: http://172.16.130.5:9000
+    mail:
+      host: 172.16.20.209
+      port: 25
+      auth: false
+      connectiontimeout: 5000
+      timeout: 5000
+      writetimeout: 5000
+      starttls: false
+      username: c2VuZGVyZGV2ZWxvcGVyMEBnbWFpbC5jb20=
+      password: b2dscmZlaXdvdW9pZGlqZA==
+      from: noreply@bytesw.com
+    minio:
+      host: 172.16.130.5
+      protocol: http
+      accessKey: O442PW991IZCS216UNTS
+      secretKey: zwBNRUfaC37CSf50TEe8QEOlCtO4aAAJ0mp3gKJA
+    rabbitmq:
+      healthEnabled: true
+      host: 172.16.130.2
+      virtualHost: plataforma-test
+      password: Z3Vlc3Q=
+      username: Z3Vlc3Q=
+    authz:
+      host: 172.16.139.8
+  frontend:
+    aceptedUrls:
+      - https://keycloakqa-core.bytesw.cloud/
+replicas: 1
+namespace: plataforma
+executionMode: 1 # 0 - arquitectura, 1 - plataforma
+actuator: 1 # 0 - inactivo, 1 - activo
+ssl:
+  appHost: plataforma-test.bytesw.cloud
+  keycloakHost: keycloakqa-core.bytesw.cloud
