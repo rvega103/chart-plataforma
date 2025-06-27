@@ -3,7 +3,7 @@ entries:
   plataforma:
   - apiVersion: v2
     appVersion: 7.0.0
-    created: "2025-06-26T22:52:22.535953373-06:00"
+    created: "2025-06-26T23:05:48.998650857-06:00"
     description: PLATAFORMA APPLICATION
     digest: 7185804632cbf2ffb3a33be0aa614b4c3d323522e4228c087e363295a2c1ca0c
     name: plataforma
@@ -11,4 +11,4 @@ entries:
     urls:
     - https://github.com/rvega103/chart-plataforma.git/plataforma-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-26T22:52:22.52564269-06:00"
+generated: "2025-06-26T23:05:48.990412638-06:00"
